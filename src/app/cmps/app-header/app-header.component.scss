@@ -4,21 +4,21 @@
     display: flex;
     align-items: center;
     width: 100%;
+
     .logo {
         flex-grow: 1;
     }
-    nav >*:not(:first-child) {
+    nav > *:not(:first-child) {
         margin-inline-start: 1rem;
-   
     }
 
-    nav>* {
-        transition: .2s;
+    nav > * {
+        transition: 0.2s;
         &:hover {
             color: whitesmoke;
         }
     }
-    
+
     .active {
         color: whitesmoke;
     }
