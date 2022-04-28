@@ -1,0 +1,25 @@
+.app-header {
+    background-color: #c5012e;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .logo {
+        flex-grow: 1;
+    }
+    nav >*:not(:first-child) {
+        margin-inline-start: 1rem;
+   
+    }
+
+    nav>* {
+        transition: .2s;
+        &:hover {
+            color: whitesmoke;
+        }
+    }
+    
+    .active {
+        color: whitesmoke;
+    }
+}

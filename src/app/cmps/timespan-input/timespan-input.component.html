@@ -1,0 +1,33 @@
+<!-- <form (ngSubmit)="onSetPeriod()">
+    <select [(ngModel)]="period.segement" name="segement">
+        <option value="days">Day{{suffix()}}</option>
+        <option value="months">Month{{suffix()}}</option>
+        <option value="years">Year{{suffix()}}</option>
+    </select>
+
+    <input [(ngModel)]="period.count" name="count" type="number" min="1" max="15">
+    <button>Set</button>
+
+</form> -->
+<form (ngSubmit)="onSetPeriod()">
+    <mat-form-field appearance="legacy">
+        <mat-label>Time segement</mat-label>
+        <mat-select [(ngModel)]="period.segement" name="segement">
+            <mat-option *ngFor="let segement of segements" [value]="segement.value">{{segement.viewValue}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="legacy" hideRequiredMarker="true">
+        <mat-label>Count</mat-label>
+        <input [(ngModel)]="period.count" name="count" matInput type="number" min="1" max="30" required>
+    </mat-form-field>
+    <button mat-raised-button>Set</button>
+
+</form>
+<mat-button-toggle-group>
+    <mat-button-toggle (click)="setPeriod.emit('30days')">30 Days</mat-button-toggle>
+    <mat-button-toggle (click)="setPeriod.emit('60days')">60 Days</mat-button-toggle>
+    <mat-button-toggle (click)="setPeriod.emit('1months')">1 Month</mat-button-toggle>
+    <mat-button-toggle (click)="setPeriod.emit('3months')">3 Months</mat-button-toggle>
+    <mat-button-toggle (click)="setPeriod.emit('1years')">1 Year</mat-button-toggle>
+    <mat-button-toggle (click)="setPeriod.emit('3years')">3 Years</mat-button-toggle>
+</mat-button-toggle-group>

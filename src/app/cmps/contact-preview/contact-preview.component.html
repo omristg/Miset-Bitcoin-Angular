@@ -1,0 +1,17 @@
+<div class="contact-preview">
+
+    <div class="info">
+        <h3 [routerLink]="['','contact','detail',contact._id]">{{contact.name}}</h3>
+        <div class="img-container">
+            <img src="https://robohash.org/{{contact._id}}" alt="">
+        </div>
+    </div>
+    <div class="details">
+        <div *ngIf="filterBy?.email">{{contact.email}}</div>
+        <div *ngIf="filterBy?.phone" >{{contact.phone}}</div>
+    </div>
+    <div class="actions">
+        <button (click)="remove.emit(contact._id)">Delete</button>
+        <button [routerLink]="['','contact','edit',contact._id]">Edit</button>
+    </div>
+</div>

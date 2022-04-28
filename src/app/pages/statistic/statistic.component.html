@@ -1,0 +1,14 @@
+<section class="statistic-page">
+    <h2>Statistics</h2>
+    <div class="chart-container">
+        <market-price-chart *ngIf="marketPriceData" [chartData]="marketPriceData"></market-price-chart>
+        <div *ngIf="!marketPriceData">loading...</div>
+        <timespan-input (setPeriod)="onSetMarketPeriod($event)"></timespan-input>
+    </div>
+    <div class="chart-container">
+        <avg-block-size-chart *ngIf="avgBlockSizeData" [chartData]="avgBlockSizeData"></avg-block-size-chart>
+        <div *ngIf="!avgBlockSizeData">Loading...</div>
+        <timespan-input (setPeriod)="onSetAvgSizePeriod($event)"></timespan-input>
+    </div>
+
+</section>

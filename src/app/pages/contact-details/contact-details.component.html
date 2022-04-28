@@ -1,0 +1,12 @@
+<section class="contact-details" *ngIf="contact">
+    <h2>{{contact.name}}</h2>
+    <div class="img-container">
+        <img src="https://robohash.org/{{contact._id}}" alt="">
+    </div>
+    <div>{{contact.email}}</div>
+    <div>{{contact.phone}}</div>
+    <div class="actions">
+        <button (click)="onGoBack()">Back</button>
+        <!-- <button [routerLink]="['edit', contact._id]"></button> -->
+    </div>
+</section>

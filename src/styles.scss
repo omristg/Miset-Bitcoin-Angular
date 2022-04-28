@@ -1,0 +1,18 @@
+
+
+// Setup
+@import "/src/assets/style/setup/fonts";
+@import "/src/assets/style/setup/functions";
+@import "/src/assets/style/setup/mixins";
+@import "/src/assets/style/setup/variables";
+
+// Basics
+@import "/src/assets/style/basics/base";
+@import "/src/assets/style/basics/buttons";
+@import "/src/assets/style/basics/helpers";
+@import "/src/assets/style/basics/layouts";
+@import "/src/assets/style/basics/menus";
+
+// Pages
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,27 @@
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    header {
+        background-color:#b71c1c;
+        margin-bottom: 50px;
+    }
+
+    main {
+        flex-grow: 1;
+    }
+
+    footer {
+        background-color: #252525;
+        color: white;
+    }
+ 
+    footer {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+}

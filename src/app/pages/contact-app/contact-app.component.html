@@ -1,0 +1,10 @@
+<section class="contact-app">
+    <div class="top-actions">
+        <h2>Contacts</h2>
+        <button (click)="onToggleFilter()"> <span class="fas filter"></span> Filter</button>
+        <button routerLink="/contact/edit"> <span class="fas plus"></span> Add contact</button>
+    </div>
+    <contact-filter *ngIf="isFilterOn"></contact-filter>
+    <contact-list [contacts]="contacts" (remove)="onRemove($event)"></contact-list>
+    <router-outlet></router-outlet>
+</section>

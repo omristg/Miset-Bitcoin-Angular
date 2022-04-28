@@ -1,0 +1,26 @@
+.contact-app {
+    .top-actions {
+        display: flex;
+        // justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem 0;
+
+        h2 {
+            flex-grow: 1;
+        }
+
+        >*:not(h2) {
+            margin-inline-start: 1rem;
+        }
+
+        button {
+            display: flex;
+            align-items: center;
+            gap: .3rem;
+
+            .fas.plus{
+                padding-bottom: 1.5px;
+            }
+        }
+    }
+}

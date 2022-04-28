@@ -1,0 +1,14 @@
+
+.login-page {
+    display: grid;
+    place-items: center;
+    form {
+        margin-top: 5rem;
+        display: grid;
+        place-items: center;
+        border: 1px solid black;
+        border-radius: 4px;
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+}

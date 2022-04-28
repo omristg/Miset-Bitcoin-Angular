@@ -1,0 +1,10 @@
+<div class="contact-filter">
+    <label for="name">Name</label>
+    <input [(ngModel)]="filterBy.name" (ngModelChange)="onSetFilterBy()" type="text" name="name" id="name">
+
+    <label for="email">Email</label>
+    <input [(ngModel)]="filterBy.email" (ngModelChange)="onSetFilterBy()" type="text" name="email" id="email">
+
+    <label for="phone">Phone</label>
+    <input [(ngModel)]="filterBy.phone" (ngModelChange)="onSetFilterBy()" type="text" name="phone" id="phone">
+</div>
